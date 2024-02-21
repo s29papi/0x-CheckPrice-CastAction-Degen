@@ -6,7 +6,30 @@ import { NextRequest } from 'next/server';
  
 export const runtime = 'edge';
  
-export async function GET(req: NextRequest) {}
+export async function GET(req: NextRequest) {
+      const searchParams = req.nextUrl.searchParams;
+    const domainNameParam:any = searchParams.get("domainName");
+      const {status, firstYearRegistrationFee, renewalFee, domainName} = await fetchData(domainNameParam);
+      const interFontData = await fetch(
+          new URL('../../public/Inter-Regular.ttf', import.meta.url),
+      ).then((res) => res.arrayBuffer());
+      const interBoldFontData = await fetch(
+          new URL('../../public/Inter-Bold.ttf', import.meta.url),
+      ).then((res) => res.arrayBuffer());
+     
+      
+      let parts = domainName.split(".");
+      let domain = parts[0];
+      let extension = parts[1];
+      let domainPriceUsdc = addDecimalBeforeLastTwoZeros(firstYearRegistrationFee);
+      let renewalDomainPriceUsdc = addDecimalBeforeLastTwoZeros(renewalFee);
+      let statusAvailable = false;
+      if (status === 'STATUS_AVAILABLE') {
+        statusAvailable = true;
+      }
+      let availColor = statusAvailable ? "text-lime-400" : "text-red-500";
+      let availWeight = statusAvailable ? "w-22" : "w-26";
+}
 
 const fetchData = async (domain: string) => {
   let status;
@@ -15,9 +38,7 @@ const fetchData = async (domain: string) => {
   let domainName;
   
   try {
-    // Check if domain name contains a dot
     if (!domain.includes('.')) {
-      // If not, concatenate ".com"
       domain += '.com';
     }
     
