@@ -4,10 +4,10 @@ import type { Metadata } from 'next';
 
 const frameMetadata = getFrameMetadata({
   buttons: [
-      {label: 'Refuel', action: 'post'},
+      {label: ''},
   ],
-  image: 'https://frames-follow-like-refuel.vercel.app/first-page.png',
-  post_url: 'https://frames-follow-like-refuel.vercel.app/api/frame',
+  image: '',
+  post_url: '',
 });
 
 export const metadata: Metadata = {
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: '3 DNS Frame by 3DNS.',
     description: 'A frame to search if a domain exists, and to also purchase it.',
-    images: [`https://frames-follow-like-refuel.vercel.app/first-page.png`],
+    images: [``],
   },
   other: {
     ...frameMetadata,
