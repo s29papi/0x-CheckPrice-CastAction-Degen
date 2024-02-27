@@ -36,7 +36,7 @@ export async function GET(req: NextRequest) {
     (
       <div tw="flex w-[800px] h-[420px]" >
         <div tw="flex relative">
-             <img tw="w-full h-full" src="http://localhost:3002/base.png" />
+             <img tw="w-full h-full" src="https://3dns-domain-register-frame.vercel.app/base.png" />
              <div tw="flex flex-col w-full h-full absolute">
                 <div tw="flex h-full w-full">
                     <div tw="flex flex-col md:flex-row w-full py-12 px-4 justify-between p-8">
