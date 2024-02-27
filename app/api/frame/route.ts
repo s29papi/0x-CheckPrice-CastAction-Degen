@@ -4,6 +4,7 @@ import { NextRequest, NextResponse } from 'next/server';
 async function getResponse(req: NextRequest): Promise<NextResponse> {
   const body: FrameRequest = await req.json();
 
+  
   return  new NextResponse(`<!DOCTYPE html><html><head>
   <title>Search</title>
   <meta property="fc:frame" content="vNext" />
