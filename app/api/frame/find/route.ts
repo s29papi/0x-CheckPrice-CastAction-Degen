@@ -18,7 +18,7 @@ return new NextResponse(`<!DOCTYPE html><html><head>
   <meta property="fc:frame:button:1:action" content="post"/>
   <meta property="fc:frame:button:2" content="Purchase" />
   <meta property="fc:frame:button:2:action" content="post_redirect"/>
-  <meta property="fc:frame:post_url" content="https://3dns-domain-register-frame.vercel.app/api/frame/process"/>
+  <meta property="fc:frame:post_url" content="https://3dns-domain-register-frame.vercel.app/api/frame/process?domainName=${domainName}"/>
   </head></html>`);
 }
 
