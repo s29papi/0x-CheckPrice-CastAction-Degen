@@ -7,7 +7,7 @@ const body: FrameRequest = await req.json();
 let domainName: string = body.untrustedData.inputText;
 
 let valid = await fetchData(domainName) 
-if (!valid) {
+if (valid == "STATUS_UNAVAILABLE") {
     return new NextResponse(`<!DOCTYPE html><html><head>
             <title>Success Page</title>
             <meta property="fc:frame" content="vNext" />
