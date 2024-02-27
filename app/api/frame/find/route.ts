@@ -14,7 +14,7 @@ if (valid == "STATUS_UNAVAILABLE") {
             <meta property="fc:frame:image" content="https://3dns-domain-register-frame.vercel.app/og?domainName=${domainName}"/>
             <meta property="fc:frame:button:1" content="Back" />
             <meta property="fc:frame:button:1:action" content="post"/>
-            <meta property="fc:frame:post_url" content="https://3dns-domain-register-frame.vercel.app/api/frame/process?domainName=${domainName}"/>
+            <meta property="fc:frame:post_url" content="https://3dns-domain-register-frame.vercel.app/api/frame/process"/>
             </head></html>`);
 }
 
