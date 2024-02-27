@@ -12,10 +12,10 @@ const frameMetadata = getFrameMetadata({
 
 export const metadata: Metadata = {
   title: '3 DNS Frame by 3DNS.',
-  description: 'A frame to search if a domain exists, and to also purchase it.',
+  description: 'A frame to search if a domain exists, and to also purchase it via 3dns.',
   openGraph: {
     title: '3 DNS Frame by 3DNS.',
-    description: 'A frame to search if a domain exists, and to also purchase it.',
+    description: 'A frame to search if a domain exists, and to also purchase it via 3dns.',
     images: [`http://localhost:3002/3dns-buy-a-domain-rescale.png`],
   },
   other: {
