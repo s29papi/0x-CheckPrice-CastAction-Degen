@@ -11,7 +11,6 @@ if (message?.input) {
 }
 return new NextResponse(`<!DOCTYPE html><html><head>
   <title>Success Page</title>
-  <meta property="og:image" content="https://3dns-domain-register-frame.vercel.app/base.png?valid=${isValid}"/>
   <meta property="fc:frame" content="vNext" />
   <meta property="fc:frame:image" content="https://3dns-domain-register-frame.vercel.app/base.png?fid=${message?.input}"/>
   <meta property="fc:frame:button:1" content="Complete" />
