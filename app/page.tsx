@@ -5,10 +5,9 @@ import type { Metadata } from 'next';
 const frameMetadata = getFrameMetadata({
   buttons: [
       {label: 'Buy 🛍️', action: 'post'},
-      {label: 'Buy 🛍️', action: 'post'},
   ],
-  image: 'http://localhost:3002/3dns-buy-a-domain-rescale.png',
-  post_url: 'http://localhost:3002/api/frame',
+  image: 'https://3dns-domain-register-frame.vercel.app/3dns-buy-a-domain-rescale.png',
+  post_url: 'https://3dns-domain-register-frame.vercel.app/api/frame',
 
 });
 
@@ -18,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: '3 DNS Frame by 3DNS.',
     description: 'A frame to search if a domain exists, and to also purchase it via 3dns.',
-    images: [`http://localhost:3002/3dns-buy-a-domain-rescale.png`],
+    images: [`https://3dns-domain-register-frame.vercel.app/3dns-buy-a-domain-rescale.png`],
   },
   other: {
     ...frameMetadata,
@@ -28,7 +27,6 @@ export const metadata: Metadata = {
 export default async function Page() {
   return (
     <>
-      <h1>3DNS DOMAIN REGISTER FRAME by 3DNS .</h1>
       <h1>3DNS DOMAIN REGISTER FRAME by 3DNS .</h1>
     </>
   );
