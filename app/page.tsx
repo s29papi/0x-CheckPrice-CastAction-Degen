@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 };
 
 export default async function Page() {
-    const redirectUrl = `https://app.3dns.box/search`;
+    const redirectUrl = `https://app.3dns.box`;
 
     redirect(redirectUrl)
 }
