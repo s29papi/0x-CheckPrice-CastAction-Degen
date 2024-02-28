@@ -10,8 +10,10 @@ export const runtime = 'edge';
  
 export async function GET(req: NextRequest) {
   const searchParams = req.nextUrl.searchParams;
-  const domainNameParam:any = searchParams.get("domainName");
-    const {status, firstYearRegistrationFee, renewalFee, domainName} = await fetchData(domainNameParam);
+  const domainName:any = searchParams.get("domainName");
+  const renewalFee:any = searchParams.get("renewalFee");
+  const firstYearRegistrationFee:any = searchParams.get("firstYearRegistrationFee");
+  const status:any = searchParams.get("status");
     const interFontData = await fetch(
         new URL('../../public/Inter-Regular.ttf', import.meta.url),
     ).then((res) => res.arrayBuffer());
@@ -147,6 +149,7 @@ const fetchData = async (domain: string) => {
   let firstYearRegistrationFee;
   let renewalFee;
   let domainName;
+  let timeOut;
   
   try {
     // Check if domain name contains a dot
@@ -168,7 +171,7 @@ const fetchData = async (domain: string) => {
     console.error('Error fetching data:', error);
   }
 
-  return { status, firstYearRegistrationFee, renewalFee, domainName };
+  return { status, firstYearRegistrationFee, renewalFee, domainName } || timeOut ;
 };
 
 function addDecimalBeforeLastTwoZeros(str: string) {
