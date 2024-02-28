@@ -7,7 +7,7 @@ const body: FrameRequest = await req.json();
 let domainName: string = body.untrustedData.inputText;
 
 let data = await fetchData(domainName) 
-// if (data.timeOut) {
+if (data.timeOut) {
       return new NextResponse(`<!DOCTYPE html><html><head>
       <title>Success Page</title>
       <meta property="fc:frame" content="vNext" />
@@ -16,30 +16,30 @@ let data = await fetchData(domainName)
       <meta property="fc:frame:button:1:action" content="post"/>
       <meta property="fc:frame:post_url" content="https://3dns-domain-register-frame.vercel.app/api/frame/refresh"/>
       </head></html>`);
-// }
+}
 
-// let imageUrl = `https://3dns-domain-register-frame.vercel.app/og?domainName=${data.domainName}&&renewalFee=${data.renewalFee}&&firstYearRegistrationFee=${data.firstYearRegistrationFee}&&status=${data.status}`
-// if (data.status == "STATUS_UNAVAILABLE") {
-//     return new NextResponse(`<!DOCTYPE html><html><head>
-//             <title>Success Page</title>
-//             <meta property="fc:frame" content="vNext" />
-//             <meta property="fc:frame:image" content="${imageUrl}"/>
-//             <meta property="fc:frame:button:1" content="Back" />
-//             <meta property="fc:frame:button:1:action" content="post"/>
-//             <meta property="fc:frame:post_url" content="https://3dns-domain-register-frame.vercel.app/api/frame/process"/>
-//             </head></html>`);
-// }
+let imageUrl = `https://3dns-domain-register-frame.vercel.app/og?domainName=${data.domainName}&&renewalFee=${data.renewalFee}&&firstYearRegistrationFee=${data.firstYearRegistrationFee}&&status=${data.status}`
+if (data.status == "STATUS_UNAVAILABLE") {
+    return new NextResponse(`<!DOCTYPE html><html><head>
+            <title>Success Page</title>
+            <meta property="fc:frame" content="vNext" />
+            <meta property="fc:frame:image" content="${imageUrl}"/>
+            <meta property="fc:frame:button:1" content="Back" />
+            <meta property="fc:frame:button:1:action" content="post"/>
+            <meta property="fc:frame:post_url" content="https://3dns-domain-register-frame.vercel.app/api/frame/process"/>
+            </head></html>`);
+}
 
-// return new NextResponse(`<!DOCTYPE html><html><head>
-//   <title>Success Page</title>
-//   <meta property="fc:frame" content="vNext" />
-//   <meta property="fc:frame:image" content="${imageUrl}"/>
-//   <meta property="fc:frame:button:1" content="Back" />
-//   <meta property="fc:frame:button:1:action" content="post"/>
-//   <meta property="fc:frame:button:2" content="Purchase" />
-//   <meta property="fc:frame:button:2:action" content="post_redirect"/>
-//   <meta property="fc:frame:post_url" content="https://3dns-domain-register-frame.vercel.app/api/frame/process?domainName=${data.domainName}"/>
-//   </head></html>`);
+return new NextResponse(`<!DOCTYPE html><html><head>
+  <title>Success Page</title>
+  <meta property="fc:frame" content="vNext" />
+  <meta property="fc:frame:image" content="${imageUrl}"/>
+  <meta property="fc:frame:button:1" content="Back" />
+  <meta property="fc:frame:button:1:action" content="post"/>
+  <meta property="fc:frame:button:2" content="Purchase" />
+  <meta property="fc:frame:button:2:action" content="post_redirect"/>
+  <meta property="fc:frame:post_url" content="https://3dns-domain-register-frame.vercel.app/api/frame/process?domainName=${data.domainName}"/>
+  </head></html>`);
  }
 
 export async function POST(req: NextRequest): Promise<Response> {
