@@ -16,7 +16,7 @@ if (data.status == "STATUS_UNAVAILABLE") {
     return new NextResponse(`<!DOCTYPE html><html><head>
             <title>Success Page</title>
             <meta property="fc:frame" content="vNext" />
-            <meta property="fc:frame:image" content="${imageUrl}"/>
+            <meta property="fc:frame:image" content=${imageUrl}/>
             <meta property="fc:frame:button:1" content="Back" />
             <meta property="fc:frame:button:1:action" content="post"/>
             <meta property="fc:frame:post_url" content="https://3dns-domain-register-frame.vercel.app/api/frame/process"/>
@@ -26,7 +26,7 @@ if (data.status == "STATUS_UNAVAILABLE") {
 return new NextResponse(`<!DOCTYPE html><html><head>
   <title>Success Page</title>
   <meta property="fc:frame" content="vNext" />
-  <meta property="fc:frame:image" content="${imageUrl}"/>
+  <meta property="fc:frame:image" content=${imageUrl}/>
   <meta property="fc:frame:button:1" content="Back" />
   <meta property="fc:frame:button:1:action" content="post"/>
   <meta property="fc:frame:button:2" content="Purchase" />
