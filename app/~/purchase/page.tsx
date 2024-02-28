@@ -14,7 +14,7 @@ export default function RedirectPage({ params, searchParams }: Props) {
     const domainName = searchParams["domainName"];
 
     useEffect(() => {
-        const redirectUrl = `https://app.3dns.box/buy/domainname.com?domainName=${domainName}`;
+        const redirectUrl = `https://app.3dns.box/buy/${domainName}`;
 
         // Perform the redirect
         window.location.href = redirectUrl; // For a full page reload redirect
