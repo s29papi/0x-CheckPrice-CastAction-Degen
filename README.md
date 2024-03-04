@@ -11,6 +11,8 @@
 
 - [What does this frame do ?](#what-does-this-frame-do)
 - [Getting Started ?](#getting-started)
+- [Deployment ?](#deployment)
+- [Learn More ?](#learn-more)
 
 
 ## What does this Frame do? 
@@ -36,18 +38,15 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
+## Deployment
+
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+To learn more about 3dns or frames, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Learn About 3dns](https://docs.3dns.box/3dns/product-overview/getting-started-with-3dns) - Getting Started with 3DNS.
+- [Learn Frames](https://docs.farcaster.xyz/learn/what-is-farcaster/frames) - Getting Started with Frames.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# 3dns-Domain-Register
