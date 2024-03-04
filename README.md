@@ -39,7 +39,7 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
 ## Deployment
-You need to provide the required environment variables to generate this frame. See .env.local
+You need to provide the required environment variables to generate this frame. See .env.local .
 
 ## Learn More
 
@@ -48,6 +48,6 @@ To learn more about 3dns or frames, take a look at the following resources:
 - [Learn About 3dns](https://docs.3dns.box/3dns/product-overview/getting-started-with-3dns) - Getting Started with 3DNS.
 - [Learn Frames](https://docs.farcaster.xyz/learn/what-is-farcaster/frames) - Getting Started with Frames.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
 
 
