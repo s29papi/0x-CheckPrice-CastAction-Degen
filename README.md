@@ -10,12 +10,11 @@
 **Table of Contents**
 
 - [What does this frame do ?](#what-does-this-frame-do)
+- [Getting Started ?](#getting-started)
 
 
 ## What does this Frame do? 
 It takes a domain name, i.e., any character set, and queries it against 3dns's API. Using this API, it generates an image containing information on whether this domain is available to be tokenized, the cost of tokenization, and the recurring cost for renewal. Being heavily layered and powered by 3dns, it goes a step further by linking directly with a 3dns checkout.
-
-
 
 ## Getting Started
 
@@ -31,7 +30,7 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser in any local frame debugger to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
