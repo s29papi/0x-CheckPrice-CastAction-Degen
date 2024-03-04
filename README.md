@@ -13,7 +13,7 @@
 
 
 ## What does this Frame do? 
-
+It takes a domain name, i.e., any character set, and queries it against 3dns's API. Using this API, it generates an image containing information on whether this domain is available to be tokenized, the cost of tokenization, and the recurring cost for renewal. Being heavily layered and powered by 3dns, it goes a step further by linking directly with a 3dns checkout.
 
 
 
