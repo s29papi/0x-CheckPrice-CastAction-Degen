@@ -1,4 +1,3 @@
-import { FrameRequest} from '@coinbase/onchainkit';
 import { NextRequest, NextResponse } from 'next/server';
 
 const FRAMES_URL = process.env.FRAMES_URL || "https://3dns-domain-register-frame.vercel.app"
