@@ -16,7 +16,7 @@ export default function RedirectPage({ params, searchParams }: Props) {
     useEffect(() => {
         const redirectUrl = `https://app.3dns.box/buy/${domainName}`;
 
-        window.location.href = redirectUrl; // For a full page reload redirect
+        window.location.href = redirectUrl; 
 
     }, [router]);
 
