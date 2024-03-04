@@ -6,8 +6,6 @@ const imageUrl = new URL("/search-rescale.png", FRAMES_URL).href
 const postUrl = new URL("/api/frame/find", FRAMES_URL).href
 
 async function getResponse(req: NextRequest): Promise<NextResponse> {
-  const body: FrameRequest = await req.json();
-
   return  new NextResponse(`<!DOCTYPE html><html><head>
       <title>Search</title>
       <meta property="fc:frame" content="vNext" />
