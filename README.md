@@ -16,7 +16,7 @@
 
 
 ## What does this Frame do? 
-It takes a domain name, i.e., any character set, and queries it against 3dns's API. Using this API, it generates an image containing information on whether this domain is available to be tokenized, the cost of tokenization, and the recurring cost for renewal. Being heavily layered and powered by 3dns, it goes a step further by linking directly with a 3dns checkout.
+This Frame facilitates domain name queries across a diverse character set by interfacing with 3dns's API. Utilizing this interface, it generates an image presenting key domain information, including its tokenization availability, associated tokenization costs, and recurring renewal fees. Distinguished by its robust architecture and bolstered by 3dns, it extends its functionality by seamlessly integrating with a direct 3dns checkout process.
 
 ## Getting Started
 
@@ -39,6 +39,7 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
 ## Deployment
+You need to provide the required environment variables to generate this frame. See .env.local
 
 ## Learn More
 
