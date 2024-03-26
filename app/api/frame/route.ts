@@ -8,6 +8,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
   return  new NextResponse(`<!DOCTYPE html><html><head>
       <title>Search</title>
       <meta property="fc:frame" content="vNext" />
+      <meta property="of:accepts:xmtp" content="2024-02-01" /> 
       <meta property="og:image" content="${imageUrl}"/>
       <meta property="fc:frame:image" content="${imageUrl}"/>
       <meta property="fc:frame:input:text" content="Enter a Domain ( Deafult: .com )" />

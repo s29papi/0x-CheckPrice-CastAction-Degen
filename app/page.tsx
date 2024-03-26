@@ -25,6 +25,7 @@ export const metadata: Metadata = {
     images: [imageUrl],
   },
   other: {
+    'of:accepts:xmtp': '2024-02-01',
     ...frameMetadata,
   },
 };

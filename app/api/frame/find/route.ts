@@ -21,6 +21,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
           return new NextResponse(`<!DOCTYPE html><html><head>
           <title>Success Page</title>
           <meta property="fc:frame" content="vNext" />
+          <meta property="of:accepts:xmtp" content="2024-02-01" /> 
           <meta property="fc:frame:image" content="${timeoutImageUrl}"/>
           <meta property="fc:frame:button:1" content="Refresh" />
           <meta property="fc:frame:button:1:action" content="post"/>
@@ -33,6 +34,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
         return new NextResponse(`<!DOCTYPE html><html><head>
                 <title>Success Page</title>
                 <meta property="fc:frame" content="vNext" />
+                <meta property="of:accepts:xmtp" content="2024-02-01" /> 
                 <meta property="fc:frame:image" content="${ogImageUrl}"/>
                 <meta property="fc:frame:button:1" content="Back" />
                 <meta property="fc:frame:button:1:action" content="post"/>
@@ -43,6 +45,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
     return new NextResponse(`<!DOCTYPE html><html><head>
       <title>Success Page</title>
       <meta property="fc:frame" content="vNext" />
+      <meta property="of:accepts:xmtp" content="2024-02-01" /> 
       <meta property="fc:frame:image" content="${ogImageUrl}"/>
       <meta property="fc:frame:button:1" content="Back" />
       <meta property="fc:frame:button:1:action" content="post"/>
