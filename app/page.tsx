@@ -9,7 +9,7 @@ const postUrl = new URL("/api/frame", FRAMES_URL).href
 
 const frameMetadata = getFrameMetadata({
   buttons: [
-    {label: 'Install View on Drakula', action: 'link', target: 'https://warpcast.com/~/add-cast-action?url=https%3A%2F%2Fdrakula-view-actions.vercel.app%2Fapi%2FgetMetadata'},
+    {label: 'Install View on Drakula', action: 'link', target: 'https://warpcast.com/~/add-cast-action?url=https%3A%2F%2Fdrakula-view.vercel.app%2Fapi%2Faction%2FgetMetadata'},
   ],
   image: imageUrl,
   post_url: postUrl,
