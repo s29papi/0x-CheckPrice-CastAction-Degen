@@ -1,7 +1,7 @@
 import { redirect } from 'next/navigation'
 import { getFrameMetadata } from '@coinbase/onchainkit';
 import type { Metadata } from 'next';
-
+   
 const REDIRECT_URL = process.env.REDIRECT_URL || "https://drakula.app"
 const FRAMES_URL = process.env.FRAMES_URL || "https://drakula-view.vercel.app"
 const imageUrl = new URL("/main.png", FRAMES_URL).href
@@ -17,11 +17,11 @@ const frameMetadata = getFrameMetadata({
 });
 
 export const metadata: Metadata = {
-  title: '3 DNS Frame by 3DNS.',
-  description: 'A frame to search if a domain exists, and to also purchase it via 3dns.',
+  title: 'Frame Install view on Drakula.',
+  description: 'A frame used to install cast action view on Drakula.',
   openGraph: {
-    title: '3 DNS Frame by 3DNS.',
-    description: 'A frame to search if a domain exists, and to also purchase it via 3dns.',
+    title: 'Frame Install view on Drakula.',
+    description: 'A frame used to install cast action view on Drakula.',
     images: [imageUrl],
   },
   other: {
