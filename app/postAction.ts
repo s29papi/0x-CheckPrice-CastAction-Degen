@@ -11,8 +11,8 @@ export async function getResponsePOST(req: NextRequest): Promise<NextResponse> {
     }
 
     let frame = {
-        "type": "frame",
-        "frameUrl": "https://drakula-view.vercel.app/frame"
+        type: "frame",
+        frameUrl: "https://drakula-view.vercel.app/frame"
       }
 
     return NextResponse.json(frame, { status: 200 });
