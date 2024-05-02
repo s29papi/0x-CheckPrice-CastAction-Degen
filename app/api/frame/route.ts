@@ -1,19 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
+import { FrameRequest, getFrameMessage } from '@coinbase/onchainkit';
+
 
 export async function POST(req: NextRequest) {
-  const postUrl = "https://drakula-view.vercel.app";
-  const imageUrl = "https://drakula-view.vercel.app/submain.png";
-
-  const {
-    untrustedData: { buttonIndex },
-  } = await req.json();
-
-  if (buttonIndex === 1) {
-    return NextResponse.redirect("https://drakula-view.vercel.app", {
-      status: 302,
-    });
-  }
-
+    const body: FrameRequest = await req.json();
+    
+    const imageUrl = "https://drakula-view.vercel.app/submain.png";
+    let fid = body.untrustedData.fid
+    const postUrl = `https://drakula-view.vercel.app/frame/pre-redirect/?fid=${fid}`;
+    
   return new NextResponse(
     `<!DOCTYPE html><html><head>
     <title>View on Drakula</title>
@@ -22,9 +17,9 @@ export async function POST(req: NextRequest) {
     <meta property="og:image" content="${imageUrl}"/>
     <meta property="fc:frame:image" content="${imageUrl}"/>
     <meta property="fc:frame:button:1" content="View" />
-    <meta property="fc:frame:button:1:action" content="post"/>
+    <meta property="fc:frame:button:1:action" content="post_redirect"/>
     <meta property="fc:frame:button:2" content="Trending" />
-    <meta property="fc:frame:button:2:action" content="post"/>
+    <meta property="fc:frame:button:2:action" content="post_redirect"/>
     <meta property="fc:frame:post_url" content="${postUrl}"/>
     </head></html>`,
     {
