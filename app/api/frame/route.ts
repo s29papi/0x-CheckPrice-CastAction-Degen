@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 
 const FRAMES_URL = "https://drakula-view.vercel.app"
 const imageUrl = new URL("/main.png", FRAMES_URL).href
-const postUrl = new URL("/api/frame/find", FRAMES_URL).href
+const postUrl = new URL("/", FRAMES_URL).href
 
 async function getResponse(req: NextRequest): Promise<NextResponse> {
   return  new NextResponse(`<!DOCTYPE html><html><head>
