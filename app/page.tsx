@@ -5,7 +5,7 @@ import type { Metadata } from 'next';
 const REDIRECT_URL = process.env.REDIRECT_URL || "https://drakula.app"
 const FRAMES_URL = process.env.FRAMES_URL || "https://drakula-view.vercel.app"
 const imageUrl = new URL("/main.png", FRAMES_URL).href
-const postUrl = new URL("/api/frame", FRAMES_URL).href
+const postUrl = new URL("/", FRAMES_URL).href
 
 const frameMetadata = getFrameMetadata({
   buttons: [
