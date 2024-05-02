@@ -5,10 +5,10 @@ import { Suspense } from 'react'
 
 export default function RedirectPage() {
     const searchParams = useSearchParams();
-    const router = useRouter();
+    // const router = useRouter();
 
-    const fid = searchParams.get('fid');
-    const buttonIdx = searchParams.get('buttonIdx');
+    // const fid = searchParams.get('fid');
+    // const buttonIdx = searchParams.get('buttonIdx');
 
 
     
