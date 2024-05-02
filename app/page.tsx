@@ -2,9 +2,9 @@ import { redirect } from 'next/navigation'
 import { getFrameMetadata } from '@coinbase/onchainkit';
 import type { Metadata } from 'next';
 
-const REDIRECT_URL = process.env.REDIRECT_URL || "https://app.3dns.box"
+const REDIRECT_URL = process.env.REDIRECT_URL || "https://drakula.app"
 const FRAMES_URL = process.env.FRAMES_URL || "https://3dns-domain-register-frame.vercel.app"
-const imageUrl = new URL("/3dns-buy-a-domain-rescale.png", FRAMES_URL).href
+const imageUrl = new URL("/main.png", FRAMES_URL).href
 const postUrl = new URL("/api/frame", FRAMES_URL).href
 
 const frameMetadata = getFrameMetadata({
