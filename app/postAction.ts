@@ -10,6 +10,8 @@ type Message = {
     message: string;
 }
 
+const HOST = process.env["HOST"] || "https://yoink.terminally.online";
+
 export async function getResponsePOST(req: NextRequest): Promise<NextResponse> {
     const body: FrameRequest = await req.json();
     const { isValid } = await getFrameMessage(body, { neynarApiKey: 'NEYNAR_ONCHAIN_KIT' });
@@ -27,6 +29,6 @@ export async function getResponsePOST(req: NextRequest): Promise<NextResponse> {
         message: 'At that time'
     }
 
-    return NextResponse.json(actionFrame, { status: 200 });
+    return NextResponse.json({ type: "frame", frameUrl: `${HOST}/api/start` });
 }
 
