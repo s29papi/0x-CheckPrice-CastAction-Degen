@@ -31,9 +31,9 @@ export const metadata: Metadata = {
 };
 
 export default async function Page() {
-    <div>Drakula View</div>
+  const redirectUrl = REDIRECT_URL;
+  redirect(redirectUrl)
 }
-
 
 
 
