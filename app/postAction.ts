@@ -25,10 +25,12 @@ export async function getResponsePOST(req: NextRequest): Promise<NextResponse> {
         frameUrl: "https://drakula-view.vercel.app/frame"
     }
 
+    // "https://drakula-view.vercel.app/frame"
+
     let message: Message = {
         message: 'At that time'
     }
 
-    return NextResponse.json({ type: "frame", frameUrl: `${HOST}/api/start` });
+    return NextResponse.json({ type: "frame", frameUrl: "https://drakula-view.vercel.app/frame" });
 }
 
