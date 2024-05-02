@@ -9,6 +9,18 @@ export async function POST(req: NextRequest) {
     let fid = body.untrustedData.fid
     let postUrl = `https://drakula-view.vercel.app/api/frame/pre-redirect?fid=${fid}`;
 
+    const options = {
+        method: 'GET',
+        headers: {accept: 'application/json', api_key: 'NEYNAR_API_DOCS'}
+    };
+      
+
+    const userJson = await fetch(`https://api.neynar.com/v2/farcaster/user/bulk?fids=${fid}&viewer_fid=${fid}`, options)
+    .then(response => response.json())
+    .catch(err => console.error(err));
+
+  const pfpUrl = userJson.users[0].username;
+
   return new NextResponse(
     `<!DOCTYPE html><html><head>
     <title>View on Drakula</title>

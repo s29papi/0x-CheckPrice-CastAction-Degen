@@ -18,15 +18,12 @@ export async function getResponsePOST(req: NextRequest): Promise<NextResponse> {
         return new NextResponse('Message not valid', { status: 500 });
     }
 
+
     let actionFrame: ActionFrame = {
         type: "frame",
         frameUrl: "https://drakula-view.vercel.app/api/frame"
     }
 
-
-    let message: Message = {
-        message: 'At that time'
-    }
 
     return NextResponse.json(actionFrame, {status: 200});
 }
