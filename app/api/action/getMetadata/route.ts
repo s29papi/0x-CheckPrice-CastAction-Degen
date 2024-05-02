@@ -15,7 +15,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
         return getResponsePOST(req)
    }
 
-   return new NextResponse('Message not valid', { status: 500 })    
+   return getResponsePOST(req) 
 }
 
 
