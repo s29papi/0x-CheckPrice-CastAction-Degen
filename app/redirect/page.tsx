@@ -29,7 +29,7 @@ export default function RedirectPage() {
             
             window.location.href = trendingUrl;
         }
-    }, [fid, buttonIdx]);
+    }, [router, fid, buttonIdx]);
 
     return (
         <Suspense>
