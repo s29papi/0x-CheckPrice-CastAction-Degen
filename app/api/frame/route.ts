@@ -1,37 +1,32 @@
 import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(req: NextRequest) {
-  const postUrl = `https://yoink.terminally.online/api/yoink`;
-  const imageUrl = `https://yoink.terminally.online/api/images/flag?date=${Date.now()}`;
+  const postUrl = "https://drakula-view.vercel.app";
+  const imageUrl = "https://drakula-view.vercel.app/submain.png";
 
   const {
     untrustedData: { buttonIndex },
   } = await req.json();
 
   if (buttonIndex === 1) {
-    return NextResponse.redirect("https://yoink.terminally.online", {
+    return NextResponse.redirect("https://drakula-view.vercel.app", {
       status: 302,
     });
   }
 
   return new NextResponse(
-    `<!DOCTYPE html>
-      <html>
-        <head>
-          <meta property="og:title" content="Yoink!" />
-          <meta property="og:image" content="${imageUrl}" />
-          <meta name="fc:frame" content="vNext" />
-          <meta name="fc:frame:image" content="${imageUrl}" />
-          <meta name="fc:frame:post_url" content="${postUrl}" />
-          <meta name="fc:frame:button:1" content="Yoink!" />
-          <meta name="hey:portal" content="vLatest" />
-          <meta name="hey:portal:image" content="${imageUrl}" />
-          <meta name="hey:portal:post_url" content="${postUrl}" />
-          <meta name="hey:portal:button:1" content="Yoink!" />
-          <meta name="hey:portal:button:1:type" content="submit" />
-        </head>
-        <body></body>
-      </html>`,
+    `<!DOCTYPE html><html><head>
+    <title>View on Drakula</title>
+    <meta property="fc:frame" content="vNext" />
+    <meta property="of:accepts:xmtp" content="2024-02-01" /> 
+    <meta property="og:image" content="${imageUrl}"/>
+    <meta property="fc:frame:image" content="${imageUrl}"/>
+    <meta property="fc:frame:button:1" content="View" />
+    <meta property="fc:frame:button:1:action" content="post"/>
+    <meta property="fc:frame:button:2" content="Trending" />
+    <meta property="fc:frame:button:2:action" content="post"/>
+    <meta property="fc:frame:post_url" content="${postUrl}"/>
+    </head></html>`,
     {
       status: 200,
       headers: {
@@ -42,3 +37,6 @@ export async function POST(req: NextRequest) {
 }
 
 export const GET = POST;
+
+
+
