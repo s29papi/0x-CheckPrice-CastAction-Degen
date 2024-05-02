@@ -1,6 +1,7 @@
 'use client';
 import {useRouter, useSearchParams} from "next/navigation";
 import {useEffect} from "react";
+import { Suspense } from 'react'
 
 export default function RedirectPage() {
     const searchParams = useSearchParams();
@@ -31,8 +32,10 @@ export default function RedirectPage() {
     }, [fid, buttonIdx]);
 
     return (
-        <div>
-            <p>Redirecting...</p>
-        </div>
+        <Suspense>
+            <div>
+                 <p>Redirecting...</p>
+            </div>
+        </Suspense>
     );
 }
