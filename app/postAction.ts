@@ -10,7 +10,7 @@ export async function getResponsePOST(req: NextRequest): Promise<NextResponse> {
         return new NextResponse('Message not valid', { status: 500 });
     }
 
-    const frame = {
+    let frame = {
         "type": "frame",
         "frameUrl": "https://drakula-view.vercel.app/frame"
       }
