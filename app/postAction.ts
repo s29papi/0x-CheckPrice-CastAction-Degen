@@ -22,15 +22,14 @@ export async function getResponsePOST(req: NextRequest): Promise<NextResponse> {
 
     let actionFrame: ActionFrame = {
         type: "frame",
-        frameUrl: "https://drakula-view.vercel.app/frame"
+        frameUrl: "https://drakula-view.vercel.app/api/frame"
     }
 
-    // "https://drakula-view.vercel.app/frame"
 
     let message: Message = {
         message: 'At that time'
     }
 
-    return NextResponse.json({ type: "frame", frameUrl: "https://drakula-view.vercel.app/api/frame" });
+    return NextResponse.json(actionFrame, {status: 200});
 }
 
