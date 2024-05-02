@@ -27,6 +27,6 @@ export async function getResponsePOST(req: NextRequest): Promise<NextResponse> {
         message: 'At that time'
     }
 
-    return NextResponse.json(message, { status: 200 });
+    return NextResponse.json(actionFrame, { status: 200 });
 }
 
