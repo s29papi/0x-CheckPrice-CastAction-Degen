@@ -1,6 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { FrameRequest, getFrameMessage } from '@coinbase/onchainkit';
 
+type ActionFrame = {
+    type: string;
+    frameUrl: string;
+}
+
+type Message = {
+    message: string;
+}
 
 export async function getResponsePOST(req: NextRequest): Promise<NextResponse> {
     const body: FrameRequest = await req.json();
@@ -10,11 +18,15 @@ export async function getResponsePOST(req: NextRequest): Promise<NextResponse> {
         return new NextResponse('Message not valid', { status: 500 });
     }
 
-    let frame = {
+    let actionFrame: ActionFrame = {
         type: "frame",
         frameUrl: "https://drakula-view.vercel.app/frame"
-      }
+    }
 
-    return NextResponse.json(frame, { status: 200 });
+    let message: Message = {
+        message: 'At that time'
+    }
+
+    return NextResponse.json(message, { status: 200 });
 }
 
