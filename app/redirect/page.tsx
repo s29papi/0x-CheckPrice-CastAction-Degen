@@ -8,7 +8,7 @@ export default function RedirectPage() {
     const searchParams = useSearchParams();
     const router = useRouter();
 
-    const fid = searchParams.get('fid');
+    const username = searchParams.get('username');
     const buttonIdx = searchParams.get('buttonIdx');
 
 
@@ -17,7 +17,7 @@ export default function RedirectPage() {
     useEffect(() => {
         if (buttonIdx == "1") {
             (async () => {
-                const trendingUrl = "https://drakula.app/trending";
+                const trendingUrl = `https://drakula.app/user/${username}`;
 
             
                 window.location.href = trendingUrl;
@@ -30,7 +30,7 @@ export default function RedirectPage() {
             
             window.location.href = trendingUrl;
         }
-    }, [router, fid, buttonIdx]);
+    }, [router, username, buttonIdx]);
 
     return (
         <Suspense>
