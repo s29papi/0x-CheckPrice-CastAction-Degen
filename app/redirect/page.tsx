@@ -33,10 +33,6 @@ export default function RedirectPage() {
     }, [router, username, buttonIdx]);
 
     return (
-        <Suspense>
-            <div>
-                 <p>Redirecting...</p>
-            </div>
-        </Suspense>
+            <div></div>
     );
 }
