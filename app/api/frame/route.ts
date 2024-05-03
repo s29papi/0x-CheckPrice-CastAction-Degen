@@ -7,7 +7,8 @@ export async function POST(req: NextRequest) {
     
     let postUrl = "https://drakula-view.vercel.app/api/frame/pre-redirect";
     let imageUrl = "https://drakula-view.vercel.app/og";
-    let fid = body.untrustedData.fid
+    let fid = body.untrustedData.castId.fid
+    
 
     const options = {
         method: 'GET',
