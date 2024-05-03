@@ -19,7 +19,7 @@ export async function POST(req: NextRequest) {
     .then(response => response.json())
     .catch(err => console.error(err));
 
-  const pfpUrl = userJson.users[0].username;
+  const userName = userJson.users[0].username;
 
   return new NextResponse(
     `<!DOCTYPE html><html><head>
@@ -28,7 +28,7 @@ export async function POST(req: NextRequest) {
     <meta property="of:accepts:xmtp" content="2024-02-01" /> 
     <meta property="og:image" content="${imageUrl}"/>
     <meta property="fc:frame:image" content="${imageUrl}"/>
-    <meta property="fc:frame:button:1" content="View" />
+    <meta property="fc:frame:button:1" content="View ${userName}" />
     <meta property="fc:frame:button:1:action" content="post_redirect"/>
     <meta property="fc:frame:button:2" content="Trending" />
     <meta property="fc:frame:button:2:action" content="post_redirect"/>
