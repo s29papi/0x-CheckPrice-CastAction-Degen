@@ -9,7 +9,7 @@ const postUrl = new URL("/", FRAMES_URL).href
 
 const frameMetadata = getFrameMetadata({
   buttons: [
-    {label: 'Install View on Drakula', action: 'link', target: 'https://warpcast.com/~/add-cast-action?url=https%3A%2F%2Fdrakula-view.vercel.app%2Fapi%2Faction%2FgetMetadata'},
+    {label: 'Install 0x Price Check Cast Action', action: 'link', target: 'https://warpcast.com/~/add-cast-action?url=https%3A%2F%2Fdrakula-view.vercel.app%2Fapi%2Faction%2FgetMetadata'},
   ],
   image: {
     src: imageUrl,
@@ -20,11 +20,11 @@ const frameMetadata = getFrameMetadata({
 });
 
 export const metadata: Metadata = {
-  title: 'Frame Install view on Drakula.',
-  description: 'A frame used to install cast action view on Drakula.',
+  title: 'Frame Install 0x Price Check Cast Action.',
+  description: 'A frame used to install 0x Price Check Cast Action.',
   openGraph: {
-    title: 'Frame Install view on Drakula.',
-    description: 'A frame used to install cast action view on Drakula.',
+    title: 'Frame Install 0x Price Check Cast Action.',
+    description: 'A frame used to install 0x Price Check Cast Action.',
     images: [imageUrl],
   },
   other: {
