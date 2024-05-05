@@ -2,8 +2,8 @@ import { redirect } from 'next/navigation'
 import { getFrameMetadata } from '@coinbase/onchainkit';
 import type { Metadata } from 'next';
    
-const REDIRECT_URL = process.env.REDIRECT_URL || "https://drakula.app"
-const FRAMES_URL = process.env.FRAMES_URL || "https://drakula-view.vercel.app"
+const REDIRECT_URL = process.env.REDIRECT_URL || "https://0x.org/"
+const FRAMES_URL = process.env.FRAMES_URL || "https://0x-check-price-cast-action.vercel.app"
 const imageUrl = new URL("/0x-Frame-Background.png", FRAMES_URL).href
 const postUrl = new URL("/", FRAMES_URL).href
 
