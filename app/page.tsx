@@ -11,7 +11,10 @@ const frameMetadata = getFrameMetadata({
   buttons: [
     {label: 'Install View on Drakula', action: 'link', target: 'https://warpcast.com/~/add-cast-action?url=https%3A%2F%2Fdrakula-view.vercel.app%2Fapi%2Faction%2FgetMetadata'},
   ],
-  image: imageUrl,
+  image: {
+    src: imageUrl,
+    aspectRatio: '1.91:1'  
+  },
   post_url: postUrl,
 
 });
