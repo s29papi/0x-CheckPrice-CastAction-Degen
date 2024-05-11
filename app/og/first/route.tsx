@@ -17,7 +17,7 @@ export async function GET(req: Request) {
             <div
                 style={{
                     alignItems: 'center',
-                    background: '#32CD32',
+                    background: 'purple',
                     backgroundSize: '100% 100%',
                     display: 'flex',
                     flexDirection: 'column',
@@ -34,7 +34,7 @@ export async function GET(req: Request) {
                 <div 
                     tw="flex"
                     style={{
-                        color: '#D2FF58',
+                        color: 'white',
                         fontSize: 80,
                         fontStyle: '"Jersey 25 Charted"',
                         letterSpacing: '-0.009em',
@@ -44,7 +44,7 @@ export async function GET(req: Request) {
                         whiteSpace: 'pre-wrap',
                     }}
                 >
-                   $Higher Price Checker ↑
+                   $Degen Price Checker 
                 </div>
             </div>
           </div>

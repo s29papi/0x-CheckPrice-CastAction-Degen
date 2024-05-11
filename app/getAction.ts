@@ -14,9 +14,9 @@ type ActionDefination = {
 
 export async function getResponseGET(req: NextRequest): Promise<NextResponse> {
     const actionDefination: ActionDefination = {
-        name: '$HIGHER price check cast action',
+        name: '$Degen price check cast action',
         icon: 'graph',
-        description: 'Farcaster Action to view the current price of $HIGHER, also to exchange it for usdc.',
+        description: 'Farcaster Action to view the current price of $Degen, also to exchange it for usdc.',
         action: <Action> {
             type: 'post'
         } 

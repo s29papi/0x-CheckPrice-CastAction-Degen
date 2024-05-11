@@ -28,7 +28,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse | Response> {
     }
 
     let sellToken_usdc = '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913'
-    let buyToken_higher = '0x0578d8A44db98B23BF096A382e016e29a5Ce0ffe'
+    let buyToken_higher = '0x4ed4E862860beD51a9570b96d89aF5E1B0Efefed'
     let usdc_amount = parseUnits(body.untrustedData.inputText, 6) 
     let url = `https://base.api.0x.org/swap/v1/quote?sellToken=${sellToken_usdc}&buyToken=${buyToken_higher}&sellAmount=${usdc_amount}`
     const response = await fetch(url, option);

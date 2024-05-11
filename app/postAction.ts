@@ -21,7 +21,7 @@ export async function getResponsePOST(req: NextRequest): Promise<NextResponse> {
 
     let actionFrame: ActionFrame = {
         type: "frame",
-        frameUrl: "https://0x-check-price-cast-action.vercel.app/api/frame"
+        frameUrl: "https://0x-CheckPrice-CastAction-Degen.vercel.app/api/frame"
     }
 
 
