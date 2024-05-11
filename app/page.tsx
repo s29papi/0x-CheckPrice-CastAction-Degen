@@ -3,13 +3,13 @@ import { getFrameMetadata } from '@coinbase/onchainkit';
 import type { Metadata } from 'next';
    
 const REDIRECT_URL = process.env.REDIRECT_URL || "https://0x.org/"
-const FRAMES_URL = process.env.FRAMES_URL || "https://0x-CheckPrice-CastAction-Degen.vercel.app"
+const FRAMES_URL = process.env.FRAMES_URL || "https://0x-check-price-cast-action-degen.vercel.app"
 const imageUrl = new URL("/og/first", FRAMES_URL).href
 const postUrl = new URL("/", FRAMES_URL).href
 
 const frameMetadata = getFrameMetadata({
   buttons: [
-    {label: 'Install $Degen Price check', action: 'link', target: 'https://warpcast.com/~/add-cast-action?url=https%3A%2F%2F0x-CheckPrice-CastAction-Degen.vercel.app%2Fapi%2Faction%2FgetMetadata'},
+    {label: 'Install $Degen Price check', action: 'link', target: 'https://warpcast.com/~/add-cast-action?url=https%3A%2F%2F0x-check-price-cast-action-degen.vercel.app%2Fapi%2Faction%2FgetMetadata'},
   ],
   image: {
     src: imageUrl,
