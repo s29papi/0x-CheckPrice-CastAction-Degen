@@ -4,9 +4,9 @@ import { encodeFunctionData, formatEther, parseEther, parseUnits  } from 'viem';
 import { base } from 'viem/chains';
 import type { FrameTransactionResponse } from '@coinbase/onchainkit/frame';
 import { getFarcasterUserAddress } from '@coinbase/onchainkit/farcaster';
-import HIGHERABI from "../../utils/higher-abi"
-import { HIGHER_BASE_CONTRACT_ADDR } from '@/app/utils/addrs';
-import qs from "qs";
+// import HIGHERABI from "../../utils/higher-abi"
+// import { HIGHER_BASE_CONTRACT_ADDR } from '@/app/utils/addrs';
+// import qs from "qs";
 
 
 async function getResponse(req: NextRequest): Promise<NextResponse | Response> { 
@@ -28,11 +28,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse | Response> {
 
         let userAddr = farcasterUserAddress?.verifiedAddresses
         let usdc_amount = parseUnits(body.untrustedData.inputText, 6) 
-
-        let option = {
-            method: 'GET',
-            headers: {accept: 'application/json', '0x-api-key': `${process.env.NEXT_PUBLIC_OX_KEY}`}
-        }
+        
 
         if (userAddr) {
             const params = {
@@ -41,8 +37,9 @@ async function getResponse(req: NextRequest): Promise<NextResponse | Response> {
                 sellAmount: usdc_amount, // Note that the DAI token uses 18 decimal places, so `sellAmount` is `100 * 10^18`.
                 takerAddress: `0x${userAddr[0].slice(2)}`, //Address that will make the trade
             };
+            let takerAddress = `0x${userAddr[0].slice(2)}`
 
-            url = `https://base.api.0x.org/swap/v1/quote?${qs.stringify(params)}`
+            url = `https://base.api.0x.org/swap/v1/quote?sellToken=0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913&buyToken=0x0578d8A44db98B23BF096A382e016e29a5Ce0ffe&sellAmount=${usdc_amount}&takerAddress=${takerAddress}`
         }
 
     }
