@@ -6,7 +6,7 @@ export async function POST(req: NextRequest) {
     const body: FrameRequest = await req.json();
     
     let postUrl = "https://0x-check-price-cast-action-degen.vercel.app";
-    let imageUrl = "https://0x-check-price-cast-action-degen.vercel.app/og/price-and-buys";
+    let imageUrl = "https://0x-check-price-cast-action-degen.vercel.app/og/price-buy";
     let buytxUrl = "https://0x-check-price-cast-action-degen.vercel.app/api/buy-tx"
     let approvebuyTxUrl = "https://0x-check-price-cast-action-degen.vercel.app/api/approve-buyTx"
     
