@@ -25,8 +25,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse | Response> {
     let usdc_amount = parseUnits(body.untrustedData.inputText, 6).toString() 
     let takerAddress;
     if (userAddr) {
-        // takerAddress = `0x${userAddr[0].slice(2)}`
-        takerAddress = "0x47dEAF612F0769d99aDB653bA2d22bba79F26C42"
+        takerAddress = `0x${userAddr[0].slice(2)}`
     }
     let url = `https://base.api.0x.org/swap/v1/quote?sellToken=0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913&buyToken=0x0578d8A44db98B23BF096A382e016e29a5Ce0ffe&sellAmount=${usdc_amount}&takerAddress=${takerAddress}`
     
