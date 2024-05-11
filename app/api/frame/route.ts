@@ -6,7 +6,7 @@ export async function POST(req: NextRequest) {
     const body: FrameRequest = await req.json();
     
     let postUrl = "https://0x-check-price-cast-action-degen.vercel.app";
-    let imageUrl = "https://0x-check-price-cast-action-degen.vercel.app/og/price-and-buy";
+    let imageUrl = "https://0x-check-price-cast-action-degen.vercel.app/og/price-and-buys";
     let buytxUrl = "https://0x-check-price-cast-action-degen.vercel.app/api/buy-tx"
     let approvebuyTxUrl = "https://0x-check-price-cast-action-degen.vercel.app/api/approve-buyTx"
     
@@ -23,7 +23,7 @@ export async function POST(req: NextRequest) {
             <meta property="fc:frame:button:1" content="Approve Buy From 0x ✅" />
             <meta property="fc:frame:button:1:action" content="tx"/>
             <meta property="fc:frame:button:1:target" content="${approvebuyTxUrl}"/>
-            <meta property="fc:frame:button:2" content="Buys 🚀" />
+            <meta property="fc:frame:button:2" content="Buy 🚀" />
             <meta property="fc:frame:button:2:action" content="tx"/>
             <meta property="fc:frame:button:2:target" content="${buytxUrl}"/>
             <meta property="fc:frame:post_url" content="${postUrl}"/>
