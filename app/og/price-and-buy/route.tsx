@@ -16,7 +16,7 @@ export async function GET(req: Request) {
     ).then((res) => res.arrayBuffer());
     
     let sellToken_usdc = '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913'
-    let buyToken_degen = '0x0578d8A44db98B23BF096A382e016e29a5Ce0ffe'
+    let buyToken_degen = '0x4ed4E862860beD51a9570b96d89aF5E1B0Efefed'
     let usdc_amount = '1000000'
     let url = `https://base.api.0x.org/swap/v1/price?sellToken=${sellToken_usdc}&buyToken=${buyToken_degen}&sellAmount=${usdc_amount}`
     const response = await fetch(url, option);
@@ -27,7 +27,7 @@ export async function GET(req: Request) {
             <div
             style={{
               alignItems: 'center',
-              background: '#32CD32',
+              background: 'purple',
               backgroundSize: '100% 100%',
               display: 'flex',
               flexDirection: 'column',
@@ -44,7 +44,7 @@ export async function GET(req: Request) {
                 <div 
                     tw="flex"
                     style={{
-                        color: '#D2FF58',
+                        color: 'white',
                         fontSize: 80,
                         fontStyle: '"Jersey 25 Charted"',
                         letterSpacing: '-0.009em',
