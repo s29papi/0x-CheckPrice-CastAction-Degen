@@ -27,7 +27,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse | Response> {
           });
 
         let userAddr = farcasterUserAddress?.verifiedAddresses
-        let usdc_amount = parseUnits(body.untrustedData.inputText, 6) 
+        let usdc_amount = parseUnits(body.untrustedData.inputText, 6).toString() 
         
 
         if (userAddr) {
@@ -67,7 +67,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse | Response> {
             },
         };
         
-        return NextResponse.json(jsonData);
+        return NextResponse.json(txData);
     }
 
 
