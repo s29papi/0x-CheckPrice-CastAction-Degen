@@ -54,7 +54,7 @@ export async function GET(req: Request) {
                         whiteSpace: 'pre-wrap',
                     }}
                 >
-                   1 USDC / {price} $ DEGENs
+                   1 USDC / {price} $ DEGEN
                 </div>
             </div>
           </div>
