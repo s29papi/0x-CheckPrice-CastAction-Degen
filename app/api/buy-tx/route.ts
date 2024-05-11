@@ -42,6 +42,32 @@ async function getResponse(req: NextRequest): Promise<NextResponse | Response> {
             url = `https://base.api.0x.org/swap/v1/quote?sellToken=0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913&buyToken=0x0578d8A44db98B23BF096A382e016e29a5Ce0ffe&sellAmount=${usdc_amount}&takerAddress=${takerAddress}`
         }
 
+
+        let option = {
+            method: 'GET',
+            headers: {accept: 'application/json', '0x-api-key': `${process.env.NEXT_PUBLIC_OX_KEY}`}
+        }
+        
+        
+        const response = await fetch(url, option);
+        const jsonData = await response.json();
+    
+        
+        let data = jsonData.data
+    
+        
+        const txData: FrameTransactionResponse = {
+            chainId: `eip155:${base.id}`,
+            method: 'eth_sendTransaction',
+            params: {
+                abi: [],
+                data,
+                to: `0x${jsonData.to.slice(2)}`,
+                value: parseEther('0.00000').toString(),
+            },
+        };
+        
+        return NextResponse.json(jsonData);
     }
 
 
