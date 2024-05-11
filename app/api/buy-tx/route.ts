@@ -31,12 +31,12 @@ async function getResponse(req: NextRequest): Promise<NextResponse | Response> {
         
 
         if (userAddr) {
-            const params = {
-                sellToken: sellToken_usdc,
-                buyToken: buyToken_higher,
-                sellAmount: usdc_amount, // Note that the DAI token uses 18 decimal places, so `sellAmount` is `100 * 10^18`.
-                takerAddress: `0x${userAddr[0].slice(2)}`, //Address that will make the trade
-            };
+            // const params = {
+            //     sellToken: sellToken_usdc,
+            //     buyToken: buyToken_higher,
+            //     sellAmount: usdc_amount, // Note that the DAI token uses 18 decimal places, so `sellAmount` is `100 * 10^18`.
+            //     takerAddress: `0x${userAddr[0].slice(2)}`, //Address that will make the trade
+            // };
             let takerAddress = `0x${userAddr[0].slice(2)}`
 
             url = `https://base.api.0x.org/swap/v1/quote?sellToken=0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913&buyToken=0x0578d8A44db98B23BF096A382e016e29a5Ce0ffe&sellAmount=${usdc_amount}&takerAddress=${takerAddress}`
