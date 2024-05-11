@@ -6,23 +6,9 @@ export async function POST(req: NextRequest) {
     const body: FrameRequest = await req.json();
     
     let postUrl = "https://drakula-view.vercel.app/api/frame/pre-redirect";
-    let imageUrl = "https://drakula-view.vercel.app/og";
-    let fid = body.untrustedData.castId.fid
+    let imageUrl = "https://0x-check-price-cast-action.vercel.app/og/price-and-buy";
     
 
-    const options = {
-        method: 'GET',
-        headers: {accept: 'application/json', api_key: 'NEYNAR_API_DOCS'}
-    };
-      
-    const userJson = await fetch(`https://api.neynar.com/v2/farcaster/user/bulk?fids=${fid}&viewer_fid=${fid}`, options)
-      .then(response => response.json())
-      .catch(err => console.error(err));
-
-    const userName = userJson.users[0].username;
-
-    imageUrl += "?" + `username=${userName}`
-    postUrl += "?" + `username=${userName}`
 
     return new NextResponse(
             `<!DOCTYPE html><html><head>
@@ -31,10 +17,9 @@ export async function POST(req: NextRequest) {
             <meta property="of:accepts:xmtp" content="2024-02-01" /> 
             <meta property="og:image" content="${imageUrl}"/>
             <meta property="fc:frame:image" content="${imageUrl}"/>
-            <meta property="fc:frame:button:1" content="View @${userName}" />
+            <meta property="fc:frame:input:text" content="Enter Amount $HIGHER"/>
+            <meta property="fc:frame:button:1" content="Buy" />
             <meta property="fc:frame:button:1:action" content="post_redirect"/>
-            <meta property="fc:frame:button:2" content="Trending" />
-            <meta property="fc:frame:button:2:action" content="post_redirect"/>
             <meta property="fc:frame:post_url" content="${postUrl}"/>
             </head></html>`,
       {
