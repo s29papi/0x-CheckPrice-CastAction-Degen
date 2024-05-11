@@ -9,11 +9,11 @@ const postUrl = new URL("/", FRAMES_URL).href
 
 const frameMetadata = getFrameMetadata({
   buttons: [
-    {label: 'Install 0x Price Check Cast Action', action: 'link', target: 'https://warpcast.com/~/add-cast-action?url=https%3A%2F%2Fdrakula-view.vercel.app%2Fapi%2Faction%2FgetMetadata'},
+    {label: 'Install $HIGHER Price check', action: 'link', target: 'https://warpcast.com/~/add-cast-action?url=https%3A%2F%2F0x-check-price-cast-action.vercel.app%2Fapi%2Faction%2FgetMetadata'},
   ],
   image: {
     src: imageUrl,
-    aspectRatio: '1:1'  
+    aspectRatio: '1.91:1'  
   },
   post_url: postUrl,
 

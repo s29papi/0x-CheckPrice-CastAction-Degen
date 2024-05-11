@@ -14,9 +14,9 @@ type ActionDefination = {
 
 export async function getResponseGET(req: NextRequest): Promise<NextResponse> {
     const actionDefination: ActionDefination = {
-        name: 'View user on Drakula.app',
-        icon: 'device-desktop',
-        description: 'Farcaster Action to view a cast authors user profile, if exists, on Drakula.',
+        name: '$HIGHER price check cast action',
+        icon: 'graph',
+        description: 'Farcaster Action to view the current price of $HIGHER, also to exchange it for usdc.',
         action: <Action> {
             type: 'post'
         } 
