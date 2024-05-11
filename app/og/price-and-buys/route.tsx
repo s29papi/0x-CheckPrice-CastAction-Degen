@@ -54,8 +54,7 @@ export async function GET(req: Request) {
                         whiteSpace: 'pre-wrap',
                     }}
                 >
-                    tswala bam
-                   {/* 1 USDC / {price} $ DEGEN */}
+                   1 USDC / {price} $ DEGEN
                 </div>
             </div>
           </div>
