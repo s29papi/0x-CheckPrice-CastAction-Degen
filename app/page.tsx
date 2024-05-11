@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
    
 const REDIRECT_URL = process.env.REDIRECT_URL || "https://0x.org/"
 const FRAMES_URL = process.env.FRAMES_URL || "https://0x-check-price-cast-action.vercel.app"
-const imageUrl = new URL("/0x-Frame-Background.png", FRAMES_URL).href
+const imageUrl = new URL("/og/first", FRAMES_URL).href
 const postUrl = new URL("/", FRAMES_URL).href
 
 const frameMetadata = getFrameMetadata({
